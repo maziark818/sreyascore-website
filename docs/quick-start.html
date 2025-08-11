@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start Guide - SreyasBridge</title>
+    <meta name="description" content="Get SreyasBridge running in 3 simple steps with this comprehensive quick start guide.">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .doc-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .step-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .code-block {
+            background: var(--bg-dark);
+            color: #e5e7eb;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .warning-box {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .warning-box i {
+            color: #f59e0b;
+            margin-right: 0.5rem;
+        }
+        
+        .success-box {
+            background: #d1fae5;
+            border: 1px solid #10b981;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .success-box i {
+            color: #10b981;
+            margin-right: 0.5rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-color);
+            color: white;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bridge"></i>
+                <span>SreyasCore</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#features">Features</a></li>
+                <li><a href="../index.html#download">Download</a></li>
+                <li><a href="../index.html#docs">Documentation</a></li>
+                <li><a href="../index.html#support">Support</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="doc-container">
+        <div style="margin-top: 6rem;">
+            <h1>🚀 Quick Start Guide</h1>
+            <p class="lead">Get SreyasBridge running in 3 simple steps!</p>
+            
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Prerequisites:</strong> Make sure you have PowerShell 5.1 or later and Windows 10/11 or Windows Server 2016+.
+            </div>
+
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h2>Start the Main Bridge</h2>
+                <p>This starts the core HTTP API service that handles all system commands.</p>
+                
+                <h3>Option A: Use the Batch Launcher (Recommended)</h3>
+                <ol>
+                    <li>Navigate to your Scripts folder</li>
+                    <li>Right-click on <code>Start-SreyasBridge.bat</code></li>
+                    <li>Select "Run as Administrator"</li>
+                </ol>
+                
+                <h3>Option B: Use PowerShell Directly</h3>
+                <div class="code-block">
+powershell -ExecutionPolicy Bypass -File "C:\Scripts\SreyasBridge.ps1"
+                </div>
+                
+                <h3>Option C: Use the Management Utility</h3>
+                <div class="code-block">
+powershell -ExecutionPolicy Bypass -File "C:\Scripts\Manage-SreyasBridge.ps1" -Action start
+                </div>
+                
+                <div class="success-box">
+                    <i class="fas fa-check-circle"></i>
+                    <strong>Success:</strong> You should see "SreyasBridge HTTP Bridge started on port 5290" and "Press Ctrl+C to stop"
+                </div>
+                
+                <div class="warning-box">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>Important:</strong> Keep this PowerShell window open! Closing it will stop the bridge service.
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h2>Start the Web Interface</h2>
+                <p>This provides a beautiful web-based control panel for managing your system.</p>
+                
+                <h3>Option A: Use the Batch Launcher</h3>
+                <ol>
+                    <li>Right-click on <code>Start-SreyasBridge-Web.bat</code></li>
+                    <li>Select "Run as Administrator"</li>
+                </ol>
+                
+                <h3>Option B: Use PowerShell Directly</h3>
+                <div class="code-block">
+powershell -ExecutionPolicy Bypass -File "C:\Scripts\SreyasBridge-Web.ps1"
+                </div>
+                
+                <div class="success-box">
+                    <i class="fas fa-check-circle"></i>
+                    <strong>Success:</strong> You should see "SreyasBridge Web Interface started on http://localhost:8080/" and "Press Ctrl+C to stop"
+                </div>
+                
+                <div class="warning-box">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>Important:</strong> Keep this PowerShell window open too! You now have two PowerShell windows running.
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h2>Access the Web Interface</h2>
+                <p>Open your web browser and start managing your system!</p>
+                
+                <ol>
+                    <li>Open your web browser (Chrome, Firefox, Edge, etc.)</li>
+                    <li>Navigate to: <code>http://localhost:8080</code></li>
+                    <li>You'll see the beautiful SreyasBridge Control Panel!</li>
+                </ol>
+                
+                <div class="success-box">
+                    <i class="fas fa-check-circle"></i>
+                    <strong>Congratulations!</strong> SreyasBridge is now running and ready to use!
+                </div>
+            </div>
+
+            <!-- What You Can Do Now -->
+            <div class="step-card">
+                <h2>🎯 What You Can Do Right Now</h2>
+                
+                <h3>System Tab</h3>
+                <ul>
+                    <li>🔧 <strong>Run Fix-F:</strong> Comprehensive system cleanup and optimization</li>
+                    <li>📊 <strong>System Info:</strong> Get detailed system specifications</li>
+                    <li>📈 <strong>System Monitor:</strong> Real-time CPU, memory, and disk usage</li>
+                    <li>🎬 <strong>Launch PowerDirector:</strong> Start video editing software</li>
+                </ul>
+                
+                <h3>Files Tab</h3>
+                <ul>
+                    <li>📋 <strong>List Files:</strong> Browse directories (default: C:\Scripts)</li>
+                    <li>🗑️ <strong>Delete Files:</strong> Remove files with confirmation</li>
+                    <li>📋 <strong>Copy Files:</strong> Copy from source to destination</li>
+                    <li>📁 <strong>Move Files:</strong> Move files between locations</li>
+                </ul>
+                
+                <h3>Processes Tab</h3>
+                <ul>
+                    <li>📋 <strong>List Processes:</strong> View all running processes</li>
+                    <li>▶️ <strong>Start Process:</strong> Launch new applications</li>
+                    <li>⏹️ <strong>Stop Process:</strong> Gracefully stop processes</li>
+                    <li>💀 <strong>Kill Process:</strong> Force-terminate processes</li>
+                </ul>
+                
+                <h3>Network Tab</h3>
+                <ul>
+                    <li>🏓 <strong>Ping Test:</strong> Test connectivity to hosts</li>
+                    <li>🛣️ <strong>Trace Route:</strong> See network path to destination</li>
+                    <li>🔍 <strong>DNS Lookup:</strong> Resolve domain names</li>
+                    <li>🚪 <strong>Port Test:</strong> Check if ports are open</li>
+                </ul>
+                
+                <h3>Services Tab</h3>
+                <ul>
+                    <li>📋 <strong>List Services:</strong> View all Windows services</li>
+                    <li>▶️ <strong>Start Service:</strong> Start stopped services</li>
+                    <li>⏹️ <strong>Stop Service:</strong> Stop running services</li>
+                    <li>🔄 <strong>Restart Service:</strong> Restart services</li>
+                </ul>
+                
+                <h3>Users Tab</h3>
+                <ul>
+                    <li>📋 <strong>List Users:</strong> View all system users</li>
+                    <li>👤 <strong>Current User:</strong> Get your user information</li>
+                    <li>💻 <strong>Active Sessions:</strong> See who's logged in</li>
+                </ul>
+                
+                <h3>Custom Tab ⭐ <strong>MOST POWERFUL FEATURE!</strong></h3>
+                <ul>
+                    <li>🔨 <strong>Build New Commands:</strong> Create your own PowerShell commands</li>
+                    <li>📝 <strong>Example Commands:</strong> Pre-built templates</li>
+                    <li>🧹 <strong>Quick Cleanup:</strong> Add custom cleanup commands</li>
+                    <li>📊 <strong>System Report:</strong> Add custom reporting commands</li>
+                </ul>
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="step-card">
+                <h2>🚨 Troubleshooting</h2>
+                
+                <h3>If services don't start:</h3>
+                <ol>
+                    <li><strong>Check PowerShell execution policy:</strong> Run <code>Get-ExecutionPolicy</code></li>
+                    <li><strong>If restricted, run:</strong> <code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code></li>
+                    <li><strong>Try running as Administrator</strong></li>
+                </ol>
+                
+                <h3>If ports are blocked:</h3>
+                <ol>
+                    <li><strong>Check Windows Firewall</strong></li>
+                    <li><strong>Make sure no other services are using ports 8080 or 5290</strong></li>
+                    <li><strong>Try different ports in the script configuration</strong></li>
+                </ol>
+                
+                <h3>If you see errors:</h3>
+                <ol>
+                    <li><strong>Check the PowerShell windows for error messages</strong></li>
+                    <li><strong>Make sure both services are running</strong></li>
+                    <li><strong>Try refreshing the browser page</strong></li>
+                    <li><strong>Check the log files in C:\Scripts\</strong></li>
+                </ol>
+            </div>
+
+            <!-- Pro Tips -->
+            <div class="step-card">
+                <h2>💡 Pro Tips</h2>
+                
+                <ul>
+                    <li><strong>Keep both PowerShell windows open</strong> - closing them stops the services</li>
+                    <li><strong>Use the Custom tab</strong> to add commands you use frequently</li>
+                    <li><strong>All operations are logged</strong> for troubleshooting</li>
+                    <li><strong>The interface is responsive</strong> - works on desktop and mobile</li>
+                    <li><strong>Commands execute in real-time</strong> - no need to refresh</li>
+                    <li><strong>Use the API directly</strong> for automation and scripting</li>
+                </ul>
+            </div>
+
+            <!-- Quick Access URLs -->
+            <div class="step-card">
+                <h2>🔗 Quick Access URLs</h2>
+                
+                <div class="code-block">
+# Web Interface
+http://localhost:8080
+
+# API Endpoint
+http://localhost:5290/api
+
+# Health Check
+http://localhost:5290/health
+
+# Command List
+http://localhost:5290/api?command=list-commands
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="step-card">
+                <h2>🚀 Next Steps</h2>
+                
+                <p>Now that you have SreyasBridge running, here's what you can explore:</p>
+                
+                <ul>
+                    <li><strong>Read the User Manual</strong> for detailed feature explanations</li>
+                    <li><strong>Check the API Reference</strong> for programmatic access</li>
+                    <li><strong>Learn Custom Commands</strong> to extend functionality</li>
+                    <li><strong>Join our Community</strong> for support and ideas</li>
+                    <li><strong>Contribute to the Project</strong> on GitHub</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="../index.html#docs" class="btn btn-primary">
+                        <i class="fas fa-book"></i>
+                        View Full Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bridge"></i>
+                        <span>SreyasCore</span>
+                    </div>
+                    <p>Advanced system management and automation for Windows</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="quick-start.html">Quick Start</a></li>
+                        <li><a href="user-manual.html">User Manual</a></li>
+                        <li><a href="api-reference.html">API Reference</a></li>
+                        <li><a href="custom-commands.html">Custom Commands</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../index.html#support">Get Help</a></li>
+                        <li><a href="https://github.com/sreyascore/sreyasbridge/issues">GitHub Issues</a></li>
+                        <li><a href="https://discord.gg/sreyascore">Discord Community</a></li>
+                        <li><a href="mailto:support@sreyascore.net">Email Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SreyasCore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

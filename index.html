@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SreyasCore - Advanced System Management & Automation</title>
+    <meta name="description" content="SreyasBridge - A comprehensive PowerShell-based HTTP bridge system for Windows system management, automation, and remote control.">
+    <meta name="keywords" content="PowerShell, Windows, automation, system management, HTTP bridge, remote control, SreyasBridge">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bridge"></i>
+                <span>SreyasCore</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#docs">Documentation</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">SreyasBridge</span>
+                    <br>Advanced System Management & Automation
+                </h1>
+                <p class="hero-description">
+                    A comprehensive PowerShell-based HTTP bridge system that provides remote control, 
+                    system management, and automation capabilities for Windows systems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download Now
+                    </a>
+                    <a href="#docs" class="btn btn-secondary">
+                        <i class="fas fa-book"></i>
+                        View Documentation
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Built-in Commands</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Real-time</span>
+                        <span class="stat-label">System Monitoring</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Secure</span>
+                        <span class="stat-label">HTTP API</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">SreyasBridge.ps1</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code># Start SreyasBridge Services
+Write-Host "Starting SreyasBridge..." -ForegroundColor Green
+
+# HTTP Bridge on port 5290
+Start-SreyasBridge -Port 5290
+
+# Web Interface on port 8080  
+Start-SreyasBridge-Web -Port 8080
+
+# System is now accessible via:
+# API: http://localhost:5290
+# Web: http://localhost:8080</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features</h2>
+                <p>Everything you need for comprehensive Windows system management</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>HTTP API Bridge</h3>
+                    <p>RESTful interface for remote system control with secure command execution</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>System Maintenance</h3>
+                    <p>Automated cleanup, optimization, and troubleshooting with the powerful Fix-F system</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Process Management</h3>
+                    <p>Start, stop, and monitor system processes with real-time status updates</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>File Operations</h3>
+                    <p>List, copy, move, and delete files/directories with full path validation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Tools</h3>
+                    <p>Ping, traceroute, DNS lookup, and port testing for network diagnostics</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gear"></i>
+                    </div>
+                    <h3>Service Control</h3>
+                    <p>Manage Windows services with start, stop, restart, and status monitoring</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>User Management</h3>
+                    <p>System user information and session monitoring capabilities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-time Monitoring</h3>
+                    <p>CPU, memory, and disk usage tracking with live updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="section-header">
+                <h2>Download SreyasBridge</h2>
+                <p>Get started with the most powerful Windows system management tool</p>
+            </div>
+            <div class="download-options">
+                <div class="download-card">
+                    <div class="download-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Quick Start Package</h3>
+                    </div>
+                    <p>Everything you need to get SreyasBridge running in minutes</p>
+                    <ul>
+                        <li>Main bridge server</li>
+                        <li>Web interface</li>
+                        <li>Startup scripts</li>
+                        <li>Quick start guide</li>
+                    </ul>
+                    <a href="downloads/SreyasBridge-QuickStart.zip" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download Quick Start
+                    </a>
+                </div>
+                <div class="download-card featured">
+                    <div class="download-badge">Recommended</div>
+                    <div class="download-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>Complete Package</h3>
+                    </div>
+                    <p>Full SreyasBridge suite with all tools and documentation</p>
+                    <ul>
+                        <li>All PowerShell scripts</li>
+                        <li>Enhanced web interface</li>
+                        <li>Command builder</li>
+                        <li>System diagnostics</li>
+                        <li>Complete documentation</li>
+                        <li>Example templates</li>
+                    </ul>
+                    <a href="downloads/SreyasBridge-Complete.zip" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download Complete
+                    </a>
+                </div>
+                <div class="download-card">
+                    <div class="download-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Source Code</h3>
+                    </div>
+                    <p>Full source code for developers and contributors</p>
+                    <ul>
+                        <li>PowerShell source files</li>
+                        <li>Web interface code</li>
+                        <li>Development documentation</li>
+                        <li>Git repository access</li>
+                    </ul>
+                    <a href="https://github.com/sreyascore/sreyasbridge" class="btn btn-secondary">
+                        <i class="fab fa-github"></i>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="documentation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Documentation</h2>
+                <p>Comprehensive guides and references for SreyasBridge</p>
+            </div>
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <i class="fas fa-play"></i>
+                    <h3>Quick Start Guide</h3>
+                    <p>Get SreyasBridge running in 3 simple steps</p>
+                    <a href="docs/quick-start.html" class="doc-link">Read Guide →</a>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-book"></i>
+                    <h3>User Manual</h3>
+                    <p>Complete user guide with examples and best practices</p>
+                    <a href="docs/user-manual.html" class="doc-link">Read Manual →</a>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-code"></i>
+                    <h3>API Reference</h3>
+                    <p>Complete API documentation with examples</p>
+                    <a href="docs/api-reference.html" class="doc-link">View API →</a>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Custom Commands</h3>
+                    <p>Learn how to extend SreyasBridge with custom functionality</p>
+                    <a href="docs/custom-commands.html" class="doc-link">Learn More →</a>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Security Guide</h3>
+                    <p>Security best practices and configuration</p>
+                    <a href="docs/security.html" class="doc-link">Security Info →</a>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Troubleshooting</h3>
+                    <p>Common issues and solutions</p>
+                    <a href="docs/troubleshooting.html" class="doc-link">Get Help →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Support</h2>
+                <p>We're here to help you succeed with SreyasBridge</p>
+            </div>
+            <div class="support-options">
+                <div class="support-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Documentation</h3>
+                    <p>Comprehensive guides and tutorials</p>
+                    <a href="#docs" class="btn btn-outline">Browse Docs</a>
+                </div>
+                <div class="support-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub Issues</h3>
+                    <p>Report bugs and request features</p>
+                    <a href="https://github.com/sreyascore/sreyasbridge/issues" class="btn btn-outline">GitHub Issues</a>
+                </div>
+                <div class="support-card">
+                    <i class="fas fa-discord"></i>
+                    <h3>Community</h3>
+                    <p>Join our Discord community</p>
+                    <a href="https://discord.gg/sreyascore" class="btn btn-outline">Join Discord</a>
+                </div>
+                <div class="support-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Support</h3>
+                    <p>Direct support for complex issues</p>
+                    <a href="mailto:support@sreyascore.net" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bridge"></i>
+                        <span>SreyasCore</span>
+                    </div>
+                    <p>Advanced system management and automation for Windows</p>
+                    <div class="social-links">
+                        <a href="https://github.com/sreyascore"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.gg/sreyascore"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/sreyascore"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="https://github.com/sreyascore/sreyasbridge">Source Code</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="docs/quick-start.html">Quick Start</a></li>
+                        <li><a href="docs/troubleshooting.html">Troubleshooting</a></li>
+                        <li><a href="https://github.com/sreyascore/sreyasbridge/issues">Issues</a></li>
+                        <li><a href="mailto:support@sreyascore.net">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="https://github.com/sreyascore/sreyasbridge/blob/main/LICENSE">License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SreyasCore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
