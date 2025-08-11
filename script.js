@@ -1,3 +1,29 @@
+// Authentication Check - Must be first!
+(function() {
+    // Check if user is authenticated
+    if (sessionStorage.getItem('sreyascore_authenticated') !== 'true') {
+        // Redirect to login page
+        window.location.href = 'login.html';
+        return;
+    }
+})();
+
+// Logout functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Clear authentication
+            sessionStorage.removeItem('sreyascore_authenticated');
+            
+            // Redirect to login page
+            window.location.href = 'login.html';
+        });
+    }
+});
+
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
